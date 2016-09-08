@@ -1,0 +1,19 @@
+#script-text-box {
+	background-color: white;
+	border: .5px black solid;
+	height: 10px;
+	padding: 20px;
+}
+
+.mp-button{
+	background-color:#5fabf1;
+	color:#fff;
+	padding: 6px 12px;
+	border: 1px solid #4d93d7;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+	text-transform: uppercase;
+	box-shadow: inset 0 1px 1px #77bdf4,0 2px 2px -1px rgba(0,0,0,0.2);
+	font-family: proxima-nova,sans-serif;
+	font-weight: bold;
+	border-radius: 4px;
+}

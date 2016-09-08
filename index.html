@@ -4,12 +4,60 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
+    <script src="js/script_contents.js"></script>
+    <script src="js/script_generator.js"></script>
   </head>
   <body class="mixpanel-platform-body">
-    <h1>Hello, World!!!!</h1>
+    <h1>Company Segment</h1><br clear="all" />
+    <div id="segment-select"></div>
+    <br clear="all" /><br clear="all" /><br clear="all" />
+
+<!-- not sure if platforms is relevant
+    <h1>Platforms</h1><br clear="all" />
+    <input type="checkbox" id="platform-ios" name="platform-ios" value="platform-ios">iOS
+    <input type="checkbox" id="platform-ios" name="platform-ios" value="platform-ios">Android
+    <input type="checkbox" id="platform-ios" name="platform-ios" value="platform-ios">Web
+    <br clear="all" /><br clear="all" />
+-->
+
+    <h1>Audience</h1><br clear="all" />
+    <input type="checkbox" class="audience-select" id="audience-select-product" name="audience-select" value="product">Product
+    <input type="checkbox" class="audience-select" id="audience-select-marketing" name="audience-select" value="marketing">Marketing
+    <br clear="all" /><br clear="all" /><br clear="all" />
+
+    <h1>Notification Interest?</h1><br clear="all" />
+    <input type="radio" name="notification-interest" checked="checked" value="yes">Yes
+    <input type="radio" name="notification-interest" value="no">No
+    <input type="radio" name="notification-interest" value="yes">Not Sure
+    <br clear="all" /><br clear="all" /><br clear="all" />
+
+    <h1>Customer Objectives</h1><br clear="all" />
+    <input type="checkbox" class="customer-objectives" id="objective-selection-1" name="customer-objectives" value="1">Increasing number of sales
+    <input type="checkbox" class="customer-objectives" id="objective-selection-2" name="customer-objectives" value="2">Optimizing revenue
+    <input type="checkbox" class="customer-objectives" id="objective-selection-3" name="customer-objectives" value="3">Sales insights (which products are selling, which aren't)
+    <input type="checkbox" class="customer-objectives" id="objective-selection-4" name="customer-objectives" value="4">Insight into marketing ROI
+    <input type="checkbox" class="customer-objectives" id="objective-selection-5" name="customer-objectives" value="5">Increase first time buyers (activation)
+    <input type="checkbox" class="customer-objectives" id="objective-selection-6" name="customer-objectives" value="6">Increase repeat buyers (retention)
+    <br clear="all" /><br clear="all" /><br clear="all" />
+
+    <button type="button" onclick="generate_script()" name="button" class="mp-button" id="save-all">Generate Script</button>
+    <br clear="all" /><br clear="all" /><br clear="all" />
+
+    <div id='script-text-box'></div>
+
     <script>
-      // Run queries and display results here
+    /* On load function */
+    $(document).ready(function() {
+      var options = {
+        items: [
+          {label: 'SMB/MM', value: 'smb/mm'},
+          {label: 'COMM/ENT', value: 'comm/ent'},
+        ]
+      };
+      var dropdown = $('#segment-select').MPSelect(options);     
+    });
     </script>
   </body>
 </html>
