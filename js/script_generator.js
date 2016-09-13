@@ -38,7 +38,7 @@ function get_modules(input){
 
 function generate_demo(modules){
 	// Initialize stuff
-	var body = "<h1>Intro</h1>"+script_intro+"<br /><br /><ul>";
+	var body = "<h1>Intro</h1><br />"+script_intro+"<br /><br /><ul>";
 	var report_set = new Set();
 
 	// Create intro text
